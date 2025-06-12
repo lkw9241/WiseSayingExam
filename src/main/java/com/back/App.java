@@ -13,7 +13,7 @@ public class App {
 
         System.out.println("== 명언 앱 ==");
         while (true) {
-            System.out.print("명령 : ");
+            System.out.print("명령) ");
             String cmd = scanner.nextLine().trim();
             if (cmd.equals("종료")) {
 
@@ -58,7 +58,7 @@ public class App {
     void actionWrite(){
         System.out.print("명언 : ");
         String content = scanner.nextLine().trim();
-        System.out.println("작가 : ");
+        System.out.print("작가 : ");
         String author = scanner.nextLine().trim();
 
         WiseSaying wiseSaying =write(author, content);
@@ -118,10 +118,10 @@ public class App {
             return;
         }
         System.out.println("명언 (기존): %s".formatted(wiseSaying.content));
-        System.out.println("명언: ");
+        System.out.print("명언: ");
         String author = scanner.nextLine().trim();
         System.out.println("작가 (기존): %s".formatted(wiseSaying.author));
-        System.out.println("작가: ");
+        System.out.print("작가: ");
         String content = scanner.nextLine().trim();
 
         modify(wiseSaying, author, content);
